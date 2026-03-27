@@ -27,3 +27,18 @@ print(type(['Asabeneh', 'Python', 'Finland']))
 print(type('Rohit Tiwari'))
 print(type('Rohit Tiwari'))
 print(type("India"))
+
+#DataTypes
+#Numbers
+    #Integer - 1, 2, 3
+    #Decimal - 1.1, 2.2, 3.3
+    #Complex - 4-4j
+#String - Rohit
+#Boolean - true / false
+#List - ['Apple', "Banana", 4, 4-4j] Ordered list
+#Dictionary - {'firstname':'Rohit', 'lastname':'Tiwari'} Key-value pairs, unordered list
+#Tuple - ('Apple', 'Banana') Cannot be changed, immutable
+#Set - (3, 4, 5, 6) Unique items only
+
+#Euclidian Distance
+print(((2-3)**2 + (3-8)**2)**0.5)
