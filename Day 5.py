@@ -65,3 +65,23 @@ full_stack = front_end #27
 full_stack.insert(5, 'Python')
 full_stack.insert(6, 'SQL')
 
+#Exercise 2
+
+#1
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+ages.sort()
+
+print('Min age: ', ages[0])
+print('Max age: ', ages[-1])
+
+print('Median age:', ages[len(ages)//2]) # median
+
+avg_age = sum(ages)/len(ages) #average
+
+min_diff = abs(min(ages) - avg_age)
+max_diff = abs(max(ages) - avg_age)
+print(min_diff, max_diff)
+
+#2
+countries = ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
+countries_1, countries_2, countries3, *scandic = countries
