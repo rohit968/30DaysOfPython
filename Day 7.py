@@ -39,3 +39,18 @@ del A
 del B #7 completely deleting the sets
 
 
+#Exercise Level 3
+
+age = [22, 19, 24, 25, 26, 24, 25, 24]
+
+#1
+age_set = set(age) # converting list to set
+print('Length of set', len(age_set))
+print('Length of list', len(age))
+
+#2 String -> collection of characters, List -> ordered collection of multiple datatypes, Tuples -> Ordered and unchangable collection, Sets -> unordered and un-indexed collection of items
+
+#3
+prac_str = "I am a teacher and I love to inspire and teach people"
+result = (prac_str.split(' '))
+print(len(set(result)))
