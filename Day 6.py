@@ -40,7 +40,7 @@ print(food_stuff_lt[len(food_stuff_lt)//2])
 print('First three items: ', food_stuff_lt[:3])
 print('Last three items: ', food_stuff_lt[-3:])
 
-#6
+#6 deleting the entire set variable
 del food_stuff_up
 
 #7
