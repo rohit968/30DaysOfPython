@@ -1,4 +1,4 @@
-c
+# DAY 6: 30 Days of python programming
 
 # Exercise Level 1
 
