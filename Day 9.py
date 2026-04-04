@@ -32,3 +32,41 @@ else:
     print('{} is equal to {}'.format(a, b))
 
 
+# Exercise level 2
+
+#1
+user_marks = int(input("Enter your marks: "))
+if user_marks > 90 and user_marks < 100:
+    print("You marks are {} and grade is A".format(user_marks))
+elif user_marks > 80:
+    print("You marks are {} and grade is B".format(user_marks))
+elif user_marks > 70:
+    print("You marks are {} and grade is C".format(user_marks))
+elif user_marks > 60:
+    print("You marks are {} and grade is D".format(user_marks))
+elif user_marks > 0:
+    print("You marks are {} and grade is F".format(user_marks))
+else:
+    print("Enter the valid marks")
+
+#2
+month_name = input("Enter the name of the month: ")
+if month_name == "December" or month_name == "January" or month_name == "February":
+    print('The season is Winter')
+elif month_name == "March" or month_name == "April" or month_name == "May":
+    print('The season is Spring')
+elif month_name == "June" or month_name == "July" or month_name == "August":
+    print('The season is Summer')
+else:
+    print('The season is Autumn')
+
+#3
+fruits = ['banana', 'orange', 'mango', 'lemon']
+user_fruit = input("Enter the name of the fruit: ")
+if user_fruit not in fruits:
+    print('The fruit is not in the list')
+    fruits.append(user_fruit)
+    print("The new list: ", fruits)
+else:
+    print('The fruit is in the list')
+
