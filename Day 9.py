@@ -70,3 +70,43 @@ if user_fruit not in fruits:
 else:
     print('The fruit is in the list')
 
+
+# Exercise Level 3
+
+#1
+person={
+    'first_name': 'Asabeneh',
+    'last_name': 'Yetayeh',
+    'age': 250,
+    'country': 'Finland',
+    'is_married': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
+    }
+}
+
+if 'skills' in person:                              #1
+    middle = len(person['skills'])//2
+    print(person['skills'][middle])
+
+
+if 'skills' in person:
+    if 'python' in person['skills']:
+        print(person['skills']['python'])
+
+
+if 'skills' in person:
+    if 'React' and 'JavaScript' in person['skills']:
+        print("He is a front end developer")
+    elif 'Node' and 'Python' and 'MongoDB' in person['skills']:
+        print("He is a back end developer")
+    elif 'React' and 'Node' and 'MongoDB' in person['skills']:
+        print('He is a full stack developer')
+else:
+    print('Unkown Title')
+
+
+if person.get('is_married') == True and person.get('country') == 'Finland':
+    print('{} {} lives in {}. He is married'.format(person['first_name'], person['last_name'], person['country']))
