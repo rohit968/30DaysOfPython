@@ -70,3 +70,13 @@ for i in range(101):
 print('The sum of all evens are:, ', sum_even)
 print('The sum of all odds are:, ', sum_odd)
 
+
+# Exercise Level 3
+
+#1
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruit_reverse = []
+for fruit in fruits:
+    fruit_reverse.insert(0, fruit)
+print(fruit_reverse)
+
