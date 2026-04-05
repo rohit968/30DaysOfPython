@@ -51,3 +51,22 @@ for i in range (101):
     if i % 2 != 0:
         print(i)
 
+
+# Exercise Level 2
+
+#1
+sum_numbers = 0
+for i in range(101):
+    sum_numbers += i
+print(sum_numbers)
+
+#2
+sum_odd, sum_even = 0, 0
+for i in range(101):
+    if i % 2 == 0:
+        sum_even =  sum_even + i
+    else:
+        sum_odd = sum_odd + i
+print('The sum of all evens are:, ', sum_even)
+print('The sum of all odds are:, ', sum_odd)
+
