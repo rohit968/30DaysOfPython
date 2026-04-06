@@ -147,3 +147,33 @@ def show_args(**args ):
 show_args(name="Alice", age=30, city="New York")
 
 
+# Exercise Level 3
+
+#1
+def is_prime(num):
+    if num < 2:
+        return False
+    elif num == 2:
+        return True
+    else:
+        for i in range(2, num):
+            if num % i == 0:
+                return "Not a prime number"
+            else:
+                return "Prime Number"
+print(is_prime(5))
+
+#2
+def is_unique(lst):
+    if len(lst) == len(set(lst)):
+        return "Unique items in list"
+    else:
+        return "Not Unique"
+print(is_unique(["a", "b", "c"]))
+
+#3
+def is_unique(lst):
+    return len({type(item) for item in lst}) == 1
+print(is_unique(["a", "b", "c"]))
+
+#4
