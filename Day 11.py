@@ -99,3 +99,51 @@ def sum_of_evens(num):
             sum += n
     return sum
 print(sum_of_evens(5))
+
+
+# Exercise Level 2
+
+#1
+def evens_and_odds(num):
+    if num > 0:
+        odds = 0
+        evens = 0
+        for n in range(num+1):
+            if n % 2 == 0:
+                evens += 1
+            else:
+                odds += 1
+        return odds, evens
+
+odds, evens = evens_and_odds(100)
+print('The number of odds are, ', odds)
+print('The number of evens are, ', evens)
+
+#2
+def factorial(num):
+    if num == 1:
+        return 1
+    else:
+        return num * factorial(num-1)
+print(factorial(5))
+
+#3
+def is_empty(param):
+    if not param:
+        return 'Empty'
+    else:
+        return 'Not Empty'
+print(is_empty(''))
+
+#4
+def greet(name = "guest"):
+    print("Hello, " + name + "!")
+greet()
+
+#5
+def show_args(**args ):
+    for k, v in args.items():
+        print('key', k, 'value', v)
+show_args(name="Alice", age=30, city="New York")
+
+
