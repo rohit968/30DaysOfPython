@@ -16,3 +16,17 @@ for id in id_gen_by_user:
 #3
 rgb_by_user = rgb_color_gen()
 print(rgb_by_user)
+
+#Exercise Level 2
+
+#1
+hexa_colors = list_of_hexa_colors()
+print(hexa_colors)
+
+#2
+rgb_colors = list_of_rgb()
+print(rgb_colors)
+
+#3
+hexa_or_rgb = generate_colors()
+print(hexa_or_rgb)

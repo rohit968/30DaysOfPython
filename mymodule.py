@@ -20,3 +20,27 @@ def rgb_color_gen():
     b = random.randint(0, 255)
     return 'rgb({}, {}, {})'.format(r, g, b)
 
+def list_of_hexa_colors():
+    hex_chars = '0123456789abcdef'
+    num_of_hexa = int(input("How many hexa colors would you like? "))
+    colors = []
+    for _ in range(num_of_hexa):
+        color = '#' + ''.join(random.choice(hex_chars) for _ in range(6))
+        colors.append(color)
+    return colors
+
+def list_of_rgb():
+    num_of_rgb = int(input("How many rgb would you like? "))
+    list_of_rgb_colors = []
+    for i in range(num_of_rgb):
+        list_of_rgb_colors.append(rgb_color_gen())
+    return list_of_rgb_colors
+
+def generate_colors():
+    color_choice = input("Would you like hexa or rgb? ")
+    if color_choice == 'hexa':
+        return list_of_hexa_colors()
+    elif color_choice == 'rgb':
+        return list_of_rgb()
+    else:
+        return "Select either hexa or rgb"
