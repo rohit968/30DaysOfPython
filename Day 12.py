@@ -30,3 +30,14 @@ print(rgb_colors)
 #3
 hexa_or_rgb = generate_colors()
 print(hexa_or_rgb)
+
+
+# Exercise Level 3
+
+#1
+shuffled_list_result = shuffle_list(['banana', 'apple', 'kiwi', 'mango', 'grape'])
+print(shuffled_list_result)
+
+#2
+random_unique_num = seven_unique_random_num()
+print(random_unique_num)

@@ -44,3 +44,10 @@ def generate_colors():
         return list_of_rgb()
     else:
         return "Select either hexa or rgb"
+
+def shuffle_list(lst):
+    random.shuffle(lst)
+    return lst
+
+def seven_unique_random_num():
+    return random.sample(range(10), 7)
