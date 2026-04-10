@@ -25,3 +25,23 @@ for number in numbers:
 
 
 # Exercise Level 2
+
+#1
+def capitals(country):
+    return country.upper()
+capital_country_name = map(capitals, countries)
+print(list(capital_country_name))
+
+#2
+def square(num):
+    return num ** 2
+numbers_square = map(square, numbers)
+print(list(numbers_square))
+
+#3
+def capital_name(name):
+    return name.upper()
+capital_name = map(capital_name, names)
+print(list(capital_name))
+
+
