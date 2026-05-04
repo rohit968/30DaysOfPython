@@ -30,3 +30,22 @@ print("Distance between farthest particles:", distance)
 def is_valid_variable(name):
     pattern = r'^[A-Za-z_][A-Za-z0-9_]*$'
     print(bool(re.match(pattern, name)))
+
+#Exercise Level 3
+
+#1
+sentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?'
+cleaned = re.sub(r'[^A-Za-z\s.!?]', '', text)
+cleaned = re.sub(r'\s+', ' ', cleaned).strip()
+
+words = re.findall(r'\b[A-Za-z]+\b', cleaned)
+
+unique_words = set(words)
+result = []
+
+for word in unique_words:
+    count = len(re.findall(rf'\b{word}\b', cleaned))
+    result.append((count, word))
+
+result.sort(reverse=True) # sort and return top 3
+print(result[0:3])
