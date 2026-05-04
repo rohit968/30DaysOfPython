@@ -23,3 +23,10 @@ distance = max_point - min_point
 
 print("Points:", points)
 print("Distance between farthest particles:", distance)
+
+#Exercise Level 2
+
+#1 Checking for valid python variable name
+def is_valid_variable(name):
+    pattern = r'^[A-Za-z_][A-Za-z0-9_]*$'
+    print(bool(re.match(pattern, name)))
