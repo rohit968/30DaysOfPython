@@ -1,6 +1,7 @@
 # DAY 19: 30 Days of python programming
 import json
-
+import re
+import csv
 
 # Exercise Level 1
 
@@ -43,3 +44,35 @@ def most_populated_countries(filename, num_of_countries):
         print(sorted_populated_countries[:num_of_countries])
 
 most_populated_countries('./data/countries_data.json', 10)
+
+
+# Exercise Level 2
+
+#1
+with open('./data/email_exchanges_big.txt') as f:
+    email_exchanges = f.read().split('\n')
+    extracted_emails = []
+    for index, email in enumerate(email_exchanges):
+        if '@' in email_exchanges[index]:
+            extracted_emails.append(re.findall(r'[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+', email_exchanges[index]))
+
+    emails = [email.strip('<>') for items in extracted_emails for email in items]
+    print(emails)
+
+#2
+with open('./data/hacker_news.csv') as f:
+    csv_reader = csv.reader(f, delimiter = ',')
+    python_count = 0
+    js_count = 0
+    java_count = 0
+    for row in csv_reader:
+        line = ' '.join(row)
+        if 'python' in line.lower():
+            python_count += 1
+        if 'javascript' in line.lower():
+            js_count += 1
+        if 'java' in line.lower():
+            java_count += 1
+    print('Python Count:', python_count)
+    print('Javascript Count:', js_count)
+    print('Java Count:', java_count)
