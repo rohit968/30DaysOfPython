@@ -97,3 +97,47 @@ print('Mode:', data.mode())
 print('Standard Deviation:', data.std())
 print('Variance:', data.var())
 print('Frequency Distribution:', data.freq_dist())
+
+#2
+class PersonAccount:
+    def __init__(self, firstname, lastname):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.incomes = {}   # {amount: description}
+        self.expenses = {}  # {amount: description}
+
+    # Add income
+    def add_income(self, amount, description):
+        self.incomes[amount] = description
+
+    # Add expense
+    def add_expense(self, amount, description):
+        self.expenses[amount] = description
+
+    # Total income
+    def total_income(self):
+        return sum(self.incomes.keys())
+
+    # Total expense
+    def total_expense(self):
+        return sum(self.expenses.keys())
+
+    # Account balance
+    def account_balance(self):
+        return self.total_income() - self.total_expense()
+
+    # Account info
+    def account_info(self):
+        return f"""
+            Account Holder: {self.firstname} {self.lastname}
+            Total Income: {self.total_income()}
+            Total Expense: {self.total_expense()}
+            Balance: {self.account_balance()}
+        """
+
+person = PersonAccount("Rohit", "Tiwari")
+person.add_income(5000, "Salary")
+person.add_income(2000, "Freelance")
+person.add_expense(1500, "Rent")
+person.add_expense(500, "Food")
+print(person.account_info())
